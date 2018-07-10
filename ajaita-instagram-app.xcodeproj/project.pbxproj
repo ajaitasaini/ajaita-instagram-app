@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		191866CF20F41AF600FBBA6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 191866CE20F41AF600FBBA6B /* AppDelegate.m */; };
-		191866D220F41AF600FBBA6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 191866D120F41AF600FBBA6B /* ViewController.m */; };
 		191866D520F41AF600FBBA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191866D320F41AF600FBBA6B /* Main.storyboard */; };
 		191866D720F41AF700FBBA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 191866D620F41AF700FBBA6B /* Assets.xcassets */; };
 		191866DA20F41AF700FBBA6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 191866D820F41AF700FBBA6B /* LaunchScreen.storyboard */; };
 		191866DD20F41AF700FBBA6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 191866DC20F41AF700FBBA6B /* main.m */; };
 		191866E720F41AF700FBBA6B /* ajaita_instagram_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 191866E620F41AF700FBBA6B /* ajaita_instagram_appTests.m */; };
 		191866F220F41AF700FBBA6B /* ajaita_instagram_appUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 191866F120F41AF700FBBA6B /* ajaita_instagram_appUITests.m */; };
+		1918670220F426C100FBBA6B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918670120F426C100FBBA6B /* LoginViewController.m */; };
+		1918670520F4331C00FBBA6B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918670420F4331C00FBBA6B /* HomeViewController.m */; };
+		1918670B20F5352E00FBBA6B /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918670A20F5352E00FBBA6B /* ComposeViewController.m */; };
+		1918670F20F5579000FBBA6B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918670E20F5579000FBBA6B /* Post.m */; };
+		7ECFCF0DFD13B45980EA58AA /* libPods-ajaita-instagram-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E74A8B737CA2444FB8CCB4F /* libPods-ajaita-instagram-app.a */; };
+		89DDDD6949110C273E338A6C /* libPods-ajaita-instagram-appUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB7185360E18E8CB131DBB4 /* libPods-ajaita-instagram-appUITests.a */; };
+		C3B944DFE5EFFEFE9F060EC7 /* libPods-ajaita-instagram-appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB645A43DBF075071791BDA /* libPods-ajaita-instagram-appTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +44,6 @@
 		191866CA20F41AF600FBBA6B /* ajaita-instagram-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ajaita-instagram-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		191866CD20F41AF600FBBA6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		191866CE20F41AF600FBBA6B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		191866D020F41AF600FBBA6B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		191866D120F41AF600FBBA6B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		191866D420F41AF600FBBA6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		191866D620F41AF700FBBA6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		191866D920F41AF700FBBA6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,23 @@
 		191866ED20F41AF700FBBA6B /* ajaita-instagram-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ajaita-instagram-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		191866F120F41AF700FBBA6B /* ajaita_instagram_appUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ajaita_instagram_appUITests.m; sourceTree = "<group>"; };
 		191866F320F41AF700FBBA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1918670020F426C100FBBA6B /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		1918670120F426C100FBBA6B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1918670320F4331C00FBBA6B /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1918670420F4331C00FBBA6B /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		1918670920F5352E00FBBA6B /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		1918670A20F5352E00FBBA6B /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		1918670D20F5579000FBBA6B /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		1918670E20F5579000FBBA6B /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		2E74A8B737CA2444FB8CCB4F /* libPods-ajaita-instagram-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ajaita-instagram-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB645A43DBF075071791BDA /* libPods-ajaita-instagram-appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ajaita-instagram-appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		546F9271A1BBD780108983E7 /* Pods-ajaita-instagram-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajaita-instagram-appTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ajaita-instagram-appTests/Pods-ajaita-instagram-appTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E60C011FE605D5832633F0F /* Pods-ajaita-instagram-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajaita-instagram-appUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ajaita-instagram-appUITests/Pods-ajaita-instagram-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE3E2946E67B071CA9D46041 /* Pods-ajaita-instagram-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajaita-instagram-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ajaita-instagram-app/Pods-ajaita-instagram-app.debug.xcconfig"; sourceTree = "<group>"; };
+		C63B69A6E1BADE5EF8F69E0C /* Pods-ajaita-instagram-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajaita-instagram-appTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ajaita-instagram-appTests/Pods-ajaita-instagram-appTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EDF682622C9922542E1D3FB8 /* Pods-ajaita-instagram-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajaita-instagram-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-ajaita-instagram-app/Pods-ajaita-instagram-app.release.xcconfig"; sourceTree = "<group>"; };
+		FD123E3323E6A61555D797F7 /* Pods-ajaita-instagram-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajaita-instagram-appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ajaita-instagram-appUITests/Pods-ajaita-instagram-appUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FEB7185360E18E8CB131DBB4 /* libPods-ajaita-instagram-appUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ajaita-instagram-appUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECFCF0DFD13B45980EA58AA /* libPods-ajaita-instagram-app.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B944DFE5EFFEFE9F060EC7 /* libPods-ajaita-instagram-appTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89DDDD6949110C273E338A6C /* libPods-ajaita-instagram-appUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +109,8 @@
 				191866E520F41AF700FBBA6B /* ajaita-instagram-appTests */,
 				191866F020F41AF700FBBA6B /* ajaita-instagram-appUITests */,
 				191866CB20F41AF600FBBA6B /* Products */,
+				887A50747B5621EB6F723A7F /* Pods */,
+				4715288F0825BADD2F84765B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +127,10 @@
 		191866CC20F41AF600FBBA6B /* ajaita-instagram-app */ = {
 			isa = PBXGroup;
 			children = (
+				1918670C20F5574100FBBA6B /* Models */,
+				191866FF20F4266600FBBA6B /* View Controllers */,
 				191866CD20F41AF600FBBA6B /* AppDelegate.h */,
 				191866CE20F41AF600FBBA6B /* AppDelegate.m */,
-				191866D020F41AF600FBBA6B /* ViewController.h */,
-				191866D120F41AF600FBBA6B /* ViewController.m */,
 				191866D320F41AF600FBBA6B /* Main.storyboard */,
 				191866D620F41AF700FBBA6B /* Assets.xcassets */,
 				191866D820F41AF700FBBA6B /* LaunchScreen.storyboard */,
@@ -132,6 +158,51 @@
 			path = "ajaita-instagram-appUITests";
 			sourceTree = "<group>";
 		};
+		191866FF20F4266600FBBA6B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1918670020F426C100FBBA6B /* LoginViewController.h */,
+				1918670120F426C100FBBA6B /* LoginViewController.m */,
+				1918670320F4331C00FBBA6B /* HomeViewController.h */,
+				1918670420F4331C00FBBA6B /* HomeViewController.m */,
+				1918670920F5352E00FBBA6B /* ComposeViewController.h */,
+				1918670A20F5352E00FBBA6B /* ComposeViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		1918670C20F5574100FBBA6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1918670D20F5579000FBBA6B /* Post.h */,
+				1918670E20F5579000FBBA6B /* Post.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4715288F0825BADD2F84765B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E74A8B737CA2444FB8CCB4F /* libPods-ajaita-instagram-app.a */,
+				2FB645A43DBF075071791BDA /* libPods-ajaita-instagram-appTests.a */,
+				FEB7185360E18E8CB131DBB4 /* libPods-ajaita-instagram-appUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		887A50747B5621EB6F723A7F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE3E2946E67B071CA9D46041 /* Pods-ajaita-instagram-app.debug.xcconfig */,
+				EDF682622C9922542E1D3FB8 /* Pods-ajaita-instagram-app.release.xcconfig */,
+				C63B69A6E1BADE5EF8F69E0C /* Pods-ajaita-instagram-appTests.debug.xcconfig */,
+				546F9271A1BBD780108983E7 /* Pods-ajaita-instagram-appTests.release.xcconfig */,
+				8E60C011FE605D5832633F0F /* Pods-ajaita-instagram-appUITests.debug.xcconfig */,
+				FD123E3323E6A61555D797F7 /* Pods-ajaita-instagram-appUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 191866F620F41AF700FBBA6B /* Build configuration list for PBXNativeTarget "ajaita-instagram-app" */;
 			buildPhases = (
+				97DEECCB025C1350CEB8BA2F /* [CP] Check Pods Manifest.lock */,
 				191866C620F41AF600FBBA6B /* Sources */,
 				191866C720F41AF600FBBA6B /* Frameworks */,
 				191866C820F41AF600FBBA6B /* Resources */,
+				9189DC4D3999A60A5CF2ABB5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 191866F920F41AF700FBBA6B /* Build configuration list for PBXNativeTarget "ajaita-instagram-appTests" */;
 			buildPhases = (
+				515CB95B013DD5B87B6795A2 /* [CP] Check Pods Manifest.lock */,
 				191866DE20F41AF700FBBA6B /* Sources */,
 				191866DF20F41AF700FBBA6B /* Frameworks */,
 				191866E020F41AF700FBBA6B /* Resources */,
@@ -174,6 +248,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 191866FC20F41AF700FBBA6B /* Build configuration list for PBXNativeTarget "ajaita-instagram-appUITests" */;
 			buildPhases = (
+				2192D16A47B372A60F85704D /* [CP] Check Pods Manifest.lock */,
 				191866E920F41AF700FBBA6B /* Sources */,
 				191866EA20F41AF700FBBA6B /* Frameworks */,
 				191866EB20F41AF700FBBA6B /* Resources */,
@@ -257,14 +332,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2192D16A47B372A60F85704D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ajaita-instagram-appUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		515CB95B013DD5B87B6795A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ajaita-instagram-appTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9189DC4D3999A60A5CF2ABB5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ajaita-instagram-app/Pods-ajaita-instagram-app-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ajaita-instagram-app/Pods-ajaita-instagram-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97DEECCB025C1350CEB8BA2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ajaita-instagram-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		191866C620F41AF600FBBA6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				191866D220F41AF600FBBA6B /* ViewController.m in Sources */,
 				191866DD20F41AF700FBBA6B /* main.m in Sources */,
+				1918670F20F5579000FBBA6B /* Post.m in Sources */,
 				191866CF20F41AF600FBBA6B /* AppDelegate.m in Sources */,
+				1918670220F426C100FBBA6B /* LoginViewController.m in Sources */,
+				1918670B20F5352E00FBBA6B /* ComposeViewController.m in Sources */,
+				1918670520F4331C00FBBA6B /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,9 +584,11 @@
 		};
 		191866F720F41AF700FBBA6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE3E2946E67B071CA9D46041 /* Pods-ajaita-instagram-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AHZV25Q2LU;
 				INFOPLIST_FILE = "ajaita-instagram-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,9 +602,11 @@
 		};
 		191866F820F41AF700FBBA6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDF682622C9922542E1D3FB8 /* Pods-ajaita-instagram-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AHZV25Q2LU;
 				INFOPLIST_FILE = "ajaita-instagram-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,6 +620,7 @@
 		};
 		191866FA20F41AF700FBBA6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C63B69A6E1BADE5EF8F69E0C /* Pods-ajaita-instagram-appTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -481,6 +639,7 @@
 		};
 		191866FB20F41AF700FBBA6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546F9271A1BBD780108983E7 /* Pods-ajaita-instagram-appTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +658,7 @@
 		};
 		191866FD20F41AF700FBBA6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E60C011FE605D5832633F0F /* Pods-ajaita-instagram-appUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ajaita-instagram-appUITests/Info.plist";
@@ -516,6 +676,7 @@
 		};
 		191866FE20F41AF700FBBA6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD123E3323E6A61555D797F7 /* Pods-ajaita-instagram-appUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ajaita-instagram-appUITests/Info.plist";

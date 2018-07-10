@@ -17,12 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)onTapCompose:(id)sender {
+    [self performSegueWithIdentifier:@"composeSegue" sender: nil];
+}
+
 
 /*
 #pragma mark - Navigation
@@ -33,5 +39,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+//    <#code#>
+//}
+//
+//- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    <#code#>
+//}
+
 
 @end

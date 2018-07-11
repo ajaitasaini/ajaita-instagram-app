@@ -18,6 +18,8 @@
 		1918670520F4331C00FBBA6B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918670420F4331C00FBBA6B /* HomeViewController.m */; };
 		1918670B20F5352E00FBBA6B /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918670A20F5352E00FBBA6B /* ComposeViewController.m */; };
 		1918670F20F5579000FBBA6B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918670E20F5579000FBBA6B /* Post.m */; };
+		1918671320F5711C00FBBA6B /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918671220F5711C00FBBA6B /* PostTableViewCell.m */; };
+		1918671620F5B1CD00FBBA6B /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918671520F5B1CD00FBBA6B /* DetailsViewController.m */; };
 		7ECFCF0DFD13B45980EA58AA /* libPods-ajaita-instagram-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E74A8B737CA2444FB8CCB4F /* libPods-ajaita-instagram-app.a */; };
 		89DDDD6949110C273E338A6C /* libPods-ajaita-instagram-appUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB7185360E18E8CB131DBB4 /* libPods-ajaita-instagram-appUITests.a */; };
 		C3B944DFE5EFFEFE9F060EC7 /* libPods-ajaita-instagram-appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB645A43DBF075071791BDA /* libPods-ajaita-instagram-appTests.a */; };
@@ -63,6 +65,10 @@
 		1918670A20F5352E00FBBA6B /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
 		1918670D20F5579000FBBA6B /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		1918670E20F5579000FBBA6B /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		1918671120F5711C00FBBA6B /* PostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostTableViewCell.h; sourceTree = "<group>"; };
+		1918671220F5711C00FBBA6B /* PostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostTableViewCell.m; sourceTree = "<group>"; };
+		1918671420F5B1CD00FBBA6B /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		1918671520F5B1CD00FBBA6B /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		2E74A8B737CA2444FB8CCB4F /* libPods-ajaita-instagram-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ajaita-instagram-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB645A43DBF075071791BDA /* libPods-ajaita-instagram-appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ajaita-instagram-appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		546F9271A1BBD780108983E7 /* Pods-ajaita-instagram-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajaita-instagram-appTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ajaita-instagram-appTests/Pods-ajaita-instagram-appTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 		191866CC20F41AF600FBBA6B /* ajaita-instagram-app */ = {
 			isa = PBXGroup;
 			children = (
+				1918671020F5710400FBBA6B /* Views */,
 				1918670C20F5574100FBBA6B /* Models */,
 				191866FF20F4266600FBBA6B /* View Controllers */,
 				191866CD20F41AF600FBBA6B /* AppDelegate.h */,
@@ -167,6 +174,8 @@
 				1918670420F4331C00FBBA6B /* HomeViewController.m */,
 				1918670920F5352E00FBBA6B /* ComposeViewController.h */,
 				1918670A20F5352E00FBBA6B /* ComposeViewController.m */,
+				1918671420F5B1CD00FBBA6B /* DetailsViewController.h */,
+				1918671520F5B1CD00FBBA6B /* DetailsViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -178,6 +187,15 @@
 				1918670E20F5579000FBBA6B /* Post.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1918671020F5710400FBBA6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1918671120F5711C00FBBA6B /* PostTableViewCell.h */,
+				1918671220F5711C00FBBA6B /* PostTableViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4715288F0825BADD2F84765B /* Frameworks */ = {
@@ -377,10 +395,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ajaita-instagram-app/Pods-ajaita-instagram-app-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/Parse/Parse.bundle",
+				"${PODS_ROOT}/ParseUI/ParseUI/Resources/Localization/en.lproj",
+				"${PODS_ROOT}/ParseUI/ParseUI/Resources/Localization/fr.lproj",
+				"${PODS_ROOT}/ParseUI/ParseUI/Resources/Localization/pt-BR.lproj",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Parse.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/fr.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pt-BR.lproj",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -415,9 +439,11 @@
 				191866DD20F41AF700FBBA6B /* main.m in Sources */,
 				1918670F20F5579000FBBA6B /* Post.m in Sources */,
 				191866CF20F41AF600FBBA6B /* AppDelegate.m in Sources */,
+				1918671320F5711C00FBBA6B /* PostTableViewCell.m in Sources */,
 				1918670220F426C100FBBA6B /* LoginViewController.m in Sources */,
 				1918670B20F5352E00FBBA6B /* ComposeViewController.m in Sources */,
 				1918670520F4331C00FBBA6B /* HomeViewController.m in Sources */,
+				1918671620F5B1CD00FBBA6B /* DetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,9 @@
 @end
 
 @implementation ComposeViewController
+- (IBAction)postButtonTapped:(id)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,6 +48,8 @@
     [Post postUserImage:self.previewImage.image withCaption:@"test" withCompletion:^(BOOL succeeded, NSError * _Nullable error){
         NSLog(@"hello it is posting good job");
     }];
+    
+   // [self performSegueWithIdentifier:@"homeTimeline" sender: nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {

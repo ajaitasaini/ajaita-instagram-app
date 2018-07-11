@@ -45,7 +45,7 @@
 }
 
 - (IBAction)onTapPost:(id)sender {
-    [Post postUserImage:self.previewImage.image withCaption:@"test" withCompletion:^(BOOL succeeded, NSError * _Nullable error){
+    [Post postUserImage:self.previewImage.image withCaption:self.userCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error){
         NSLog(@"hello it is posting good job");
     }];
     

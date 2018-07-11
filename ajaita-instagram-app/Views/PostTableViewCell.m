@@ -15,6 +15,7 @@
     self.postImage.file = postPassed.image;
     [self.postImage loadInBackground];
     self.currentPost = postPassed;
+    self.postComment.text = postPassed.caption;
 }
 
 - (void)awakeFromNib {

@@ -16,5 +16,6 @@
 @property (strong, nonatomic) PFImageView *passedInImage;
 @property (weak, nonatomic) IBOutlet PostTableViewCell *currentCell;
 @property (strong, nonatomic) Post *post;
+//@property (nonatomic, weak) id<DetailsViewControllerDelegate> delegate;
 
 @end

@@ -49,7 +49,7 @@
         NSLog(@"hello it is posting good job");
     }];
     
-   // [self performSegueWithIdentifier:@"homeTimeline" sender: nil];
+   [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {

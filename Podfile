@@ -8,7 +8,7 @@ target 'ajaita-instagram-app' do
   # Pods for ajaita-instagram-app
   pod 'Parse'
   pod 'ParseUI'
-
+  pod 'MBProgressHUD'
   target 'ajaita-instagram-appTests' do
     inherit! :search_paths
     # Pods for testing

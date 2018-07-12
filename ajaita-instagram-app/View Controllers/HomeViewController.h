@@ -10,6 +10,6 @@
 
 @interface HomeViewController : UIViewController
 
-@property (strong, nonatomic) NSArray *posts;
+@property (strong, nonatomic) NSMutableArray *posts;
 
 @end

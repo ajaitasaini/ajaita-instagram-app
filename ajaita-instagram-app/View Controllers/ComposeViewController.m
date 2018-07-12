@@ -9,6 +9,9 @@
 #import "ComposeViewController.h"
 #import <Parse/Parse.h>
 #import "Post.h"
+#import "HomeViewController.h"
+#import "MBProgressHUD.h"
+
 
 @interface ComposeViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -45,10 +48,11 @@
 }
 
 - (IBAction)onTapPost:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.imageView animated:true];
     [Post postUserImage:self.previewImage.image withCaption:self.userCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error){
         NSLog(@"hello it is posting good job");
+        [MBProgressHUD hideHUDForView:self.imageView animated:true];
     }];
-    
    [self dismissViewControllerAnimated:true completion:nil];
 }
 

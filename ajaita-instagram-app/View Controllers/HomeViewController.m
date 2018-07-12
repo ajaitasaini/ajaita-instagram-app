@@ -11,10 +11,12 @@
 #import "Post.h"
 #import "PostTableViewCell.h"
 #import "DetailsViewController.h"
+#import "MBProgressHUD.h"
 
-@interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface HomeViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *postsTableView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (assign, nonatomic) BOOL isMoreDataLoading;
 
 @end
 
@@ -31,6 +33,10 @@
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(constructQuery) forControlEvents:UIControlEventValueChanged];
     [self.postsTableView insertSubview:self.refreshControl atIndex:0];
+}
+
+- (void)loadDataFromNetwork {
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,10 +69,12 @@
     [postQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable posts, NSError * _Nullable error) {
         if (posts) {
             // do something with the data fetched
-            self.posts = posts;
+            self.posts = [[NSMutableArray alloc] initWithArray:posts];
+            //[MBProgressHUD showHUDAddedTo:self.postsTableView animated:true];
             [self.postsTableView reloadData];
             // reload
             NSLog(@"refreshed");
+            //[MBProgressHUD hideHUDForView:self.postsTableView animated:true];
             [self.refreshControl endRefreshing];
         }
         else {
@@ -76,6 +84,44 @@
     
 }
 
+-(void)loadMoreData{
+    PFQuery *nextPostQuery = [Post query];
+    [nextPostQuery orderByDescending:@"createdAt"];
+    [nextPostQuery includeKey:@"author"];
+    nextPostQuery.limit = 20;
+    nextPostQuery.skip = [self.posts count];
+    
+    // fetch data asynchronously
+    [nextPostQuery findObjectsInBackgroundWithBlock:^(NSArray<Post *> * _Nullable newPosts, NSError * _Nullable error) {
+        if (newPosts) {
+            // do something with the data fetched
+            for (Post *post in newPosts) {
+                [self.posts addObject:post];
+            }
+            self.isMoreDataLoading = false;
+            [self.postsTableView reloadData];
+            // reload
+            NSLog(@"refreshed");
+            [self.refreshControl endRefreshing];
+        }
+        else {
+            self.isMoreDataLoading = false;
+            [self.postsTableView reloadData];
+        }
+    }];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if(!self.isMoreDataLoading){
+        int scrollViewContentHeight = self.postsTableView.contentSize.height;
+        int scrollOffsetThreshold = scrollViewContentHeight - self.postsTableView.bounds.size.height;
+        
+        if(scrollView.contentOffset.y > scrollOffsetThreshold && self.postsTableView.isDragging) {
+            self.isMoreDataLoading = true;
+            [self loadMoreData];
+        }
+    }
+}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

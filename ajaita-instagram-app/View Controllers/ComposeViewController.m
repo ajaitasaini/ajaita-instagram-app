@@ -48,12 +48,12 @@
 }
 
 - (IBAction)onTapPost:(id)sender {
-    [MBProgressHUD showHUDAddedTo:self.imageView animated:true];
+    [MBProgressHUD showHUDAddedTo:self.view animated:true];
     [Post postUserImage:self.previewImage.image withCaption:self.userCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error){
+        [MBProgressHUD hideHUDForView:self.view animated:true];
         NSLog(@"hello it is posting good job");
-        [MBProgressHUD hideHUDForView:self.imageView animated:true];
+        [self dismissViewControllerAnimated:true completion:nil];
     }];
-   [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {

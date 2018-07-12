@@ -54,7 +54,6 @@
 - (IBAction)onTapLogIn:(id)sender {
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
-    
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         
         if ([self.usernameField.text isEqual:@""] || [self.passwordField.text isEqual:@""]){

@@ -35,6 +35,13 @@
     [self.postsTableView insertSubview:self.refreshControl atIndex:0];
 }
 
+- (IBAction)onTapLogout:(id)sender {
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        NSLog(@"Logged out!");
+        [self dismissViewControllerAnimated:true completion:nil];
+    }];
+}
+
 - (void)loadDataFromNetwork {
     
 }

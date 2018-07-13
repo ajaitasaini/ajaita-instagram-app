@@ -1,8 +1,8 @@
 //
-//  PostTableViewCell.h
+//  PostCollectionViewCell.h
 //  ajaita-instagram-app
 //
-//  Created by Ajaita Saini on 7/10/18.
+//  Created by Ajaita Saini on 7/12/18.
 //  Copyright © 2018 Ajaita Saini. All rights reserved.
 //
 
@@ -10,13 +10,13 @@
 #import <ParseUI/ParseUI.h>
 #import "Post.h"
 
-@interface PostTableViewCell : UITableViewCell
+@interface PostCollectionViewCell : UICollectionViewCell
+
 @property (weak, nonatomic) IBOutlet PFImageView *postImage;
 @property (strong, nonatomic) Post *currentPost;
 @property (weak, nonatomic) IBOutlet UILabel *postComment;
-@property (weak, nonatomic) IBOutlet UILabel *userName;
-@property (weak, nonatomic) IBOutlet UIButton *likeCount;
 
 -(void) setupCell:(Post *)postPassed;
+
 
 @end

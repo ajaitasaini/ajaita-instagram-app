@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
 @interface ProfileViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet PFImageView *profileImage;
 @property (strong, nonatomic) NSMutableArray *posts;
-
 @end

@@ -90,11 +90,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="457.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="swI-gX-tU7" customClass="PFImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="356"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <gestureRecognizers/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDB-WD-6g5">
                                                     <rect key="frame" x="15" y="364" width="345" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -116,12 +111,23 @@
                                                         <action selector="onTapFavorite:" destination="aGq-tz-g0g" eventType="touchUpInside" id="RZS-k4-K8x"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ikz-DB-WGz" customClass="PFImageView">
+                                                    <rect key="frame" x="15" y="11" width="79" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="swI-gX-tU7" customClass="PFImageView">
+                                                    <rect key="frame" x="0.0" y="91" width="375" height="356"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="likeCount" destination="mPF-TU-myh" id="9u6-u3-bKD"/>
                                             <outlet property="postComment" destination="Wvg-sV-3IF" id="zDw-fd-QHj"/>
                                             <outlet property="postImage" destination="swI-gX-tU7" id="JOd-6b-SFg"/>
+                                            <outlet property="profileImageIcon" destination="Ikz-DB-WGz" id="J6v-pY-LrK"/>
                                             <segue destination="Ezj-KU-rkN" kind="presentation" identifier="detailSegue" id="phH-IU-Kbp"/>
                                         </connections>
                                     </tableViewCell>
@@ -308,10 +314,10 @@
             </objects>
             <point key="canvasLocation" x="326" y="1058"/>
         </scene>
-        <!--ProfileViewController-->
+        <!--Profile View Controller-->
         <scene sceneID="8Hu-0F-CVd">
             <objects>
-                <viewController title="ProfileViewController" id="xMw-GE-JoK" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController title="Profile View Controller" id="xMw-GE-JoK" customClass="ProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rk0-4q-6DT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -346,7 +352,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEZ-gG-JWN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEZ-gG-JWN" customClass="PFImageView">
                                 <rect key="frame" x="16" y="38" width="98" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -355,8 +361,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Update Profile "/>
                                 <connections>
-                                    <action selector="onTapSetProfilePicture:" destination="xMw-GE-JoK" eventType="touchUpInside" id="RdI-iB-x6q"/>
-                                    <action selector="updateProfileImage:" destination="xMw-GE-JoK" eventType="touchUpInside" id="d8z-64-nE9"/>
+                                    <action selector="onTapSetProfilePic:" destination="xMw-GE-JoK" eventType="touchUpInside" id="h1H-mY-Q7L"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -367,7 +372,7 @@
                     <navigationItem key="navigationItem" id="8fw-lZ-j4c"/>
                     <connections>
                         <outlet property="postsCollectionView" destination="dsQ-Hj-wLo" id="D7k-2n-anB"/>
-                        <outlet property="profileImage" destination="AEZ-gG-JWN" id="Chx-l6-1LE"/>
+                        <outlet property="profileImage" destination="AEZ-gG-JWN" id="21K-3e-l7g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wcg-dz-Z1y" userLabel="First Responder" sceneMemberID="firstResponder"/>

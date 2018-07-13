@@ -30,7 +30,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ajaita-instagram-app/Views/PostCollectionViewCell.m"
-            timestampString = "553162311.384881"
+            timestampString = "553213549.766667"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
@@ -46,7 +46,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ajaita-instagram-app/View Controllers/ComposeViewController.m"
-            timestampString = "553189727.302826"
+            timestampString = "553212862.088065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -62,7 +62,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ajaita-instagram-app/View Controllers/ProfileViewController.m"
-            timestampString = "553189727.302897"
+            timestampString = "553214079.213847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
@@ -78,7 +78,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ajaita-instagram-app/View Controllers/ProfileViewController.m"
-            timestampString = "553189727.3032449"
+            timestampString = "553214079.214137"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
@@ -94,13 +94,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ajaita-instagram-app/View Controllers/UpdateProfileViewController.m"
-            timestampString = "553189727.3034869"
+            timestampString = "553214079.214231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 #import "Post.h"
 #import "PostCollectionViewCell.h"
 
@@ -25,7 +26,8 @@
     
     self.postsCollectionView.delegate = self;
     self.postsCollectionView.dataSource = self;
-    
+    PFUser *user = [PFUser currentUser];
+    self.profileImage.file = user[@"profileImage"];
     [self constructQuery];
 }
 
@@ -53,24 +55,22 @@
     }];
     
 }
-
-//- (IBAction)onTapSetProfilePicture:(id)sender {
-//    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
-//    imagePickerVC.delegate = self;
-//    imagePickerVC.allowsEditing = YES;
-//
-//    [self presentViewController:imagePickerVC animated:YES completion:nil];
-//
-//    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-//        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
-//        NSLog(@"Entered camera");
-//    }
-//    else {
-//        NSLog(@"Camera 🚫 available so we will use photo library instead");
-//        imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-//    }
-//
-//}
+- (IBAction)onTapSetProfilePic:(id)sender {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+    
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+            NSLog(@"Entered camera");
+        }
+        else {
+            NSLog(@"Camera 🚫 available so we will use photo library instead");
+            imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+}
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
@@ -78,17 +78,12 @@
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     
-    //self.profileImage.image = editedImage;
+    self.profileImage.image = editedImage;
     
-    PFObject *profile = [[PFObject alloc] initWithClassName:@"Profile"];
-    profile[@"postID"] = @"PostID";
-    profile[@"userID"] = @"userID";
-    PFFile *imageFile = [PFFile fileWithName:@"photo.png" data:UIImagePNGRepresentation(editedImage)]; //editedImage is UIImage *
-    profile[@"image"] = imageFile;
-    
-    // Do something with the images (based on your use case)
-    
-    // Dismiss UIImagePickerController to go back to your original view controller
+    PFUser *user = PFUser.currentUser;
+    user[@"profileImage"] = [Post getPFFileFromImage:editedImage];
+    NSLog(@"%@", user[@"profileImage"]);
+    [user saveInBackground];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

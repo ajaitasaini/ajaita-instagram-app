@@ -19,6 +19,9 @@
     self.postComment.text = postPassed.caption;
     self.userName.text = PFUser.currentUser.username;
     [self.likeCount setTitle:[NSString stringWithFormat:@"%@", postPassed.likeCount.stringValue] forState: UIControlStateNormal];
+    PFUser *user = [PFUser currentUser];
+    self.profileImageIcon.file = user[@"profileImage"];
+    [self.profileImageIcon loadInBackground];
 }
 
 - (void)awakeFromNib {

@@ -1,8 +1,8 @@
-# Project 4 - *Name of App Here*
+# Project 4 - *Ajaita's Instagram App*
 
-**Name of your app** is a photo sharing app using Parse as its backend.
+**Ajaita's Instragram App** is a photo sharing app using Parse as its backend.
 
-Time spent: **X** hours spent in total
+Time spent: **30** hours spent in total
 
 ## User Stories
 
@@ -20,17 +20,17 @@ The following **optional** features are implemented:
 
 - [x] Run your app on your phone and use the camera to take the photo
 - [x] Style the login page to look like the real Instagram login page.
-- [ ] Style the feed to look like the real Instagram feed.
+- [x] Style the feed to look like the real Instagram feed.
 - [x] User can use a tab bar to switch between all "Instagram" posts and posts published only by the user. AKA, tabs for Home Feed and Profile
 - [x] User can load more posts once he or she reaches the bottom of the feed using infinite scrolling.
-- [ ] Show the username and creation time for each post
+- [x] Show the username and creation time for each post
 - [x] After the user submits a new post, show a progress HUD while the post is being uploaded to Parse
 - User Profiles:
 - [x] Allow the logged in user to add a profile photo
 - [x] Display the profile photo with each post
 - [x] Tapping on a post's username or profile photo goes to that user's profile page
 - [ ] User can comment on a post and see all comments for each post in the post details screen.
-- [ ] User can like a post and see number of likes for each post in the post details screen.
+- [x] User can like a post and see number of likes for each post in the post details screen.
 - [ ] Implement a custom camera view.
 
 The following **additional** features are implemented:
@@ -39,14 +39,14 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. implement storyboard programatically
+2. extend app so that I can add locations to each post
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/2fKplsXe1AcsdfMLbX/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -55,11 +55,18 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
+-[Parse] - https://docs.parseplatform.org/ios/guide/
+-[ParseUI] - https://github.com/parse-community/ParseUI-iOS
+-Instagram heart: https://icons8.com/icon/86/heart
+-Instagram name: https://worldvectorlogo.com/logo/instagram-1
 
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+1. Load a profile image for the user
+2. infinite scrolling
 
 ## License
 

@@ -30,13 +30,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.postsTableView.rowHeight = 600;
+    
     self.postsTableView.delegate = self;
     self.postsTableView.dataSource = self;
+    
     [self constructQuery];
     
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(constructQuery) forControlEvents:UIControlEventValueChanged];
-    [self.postsTableView insertSubview:self.refreshControl atIndex:0];
+    [self refreshPosts];
 }
 
 #pragma mark - Action
@@ -141,6 +141,12 @@
             [self loadMoreData];
         }
     }
+}
+
+- (void) refreshPosts {
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(constructQuery) forControlEvents:UIControlEventValueChanged];
+    [self.postsTableView insertSubview:self.refreshControl atIndex:0];
 }
 
 #pragma mark - Navigation

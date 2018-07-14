@@ -21,10 +21,10 @@
     self.currentPost = postPassed;
     self.postComment.text = postPassed.caption;
     [self.likeCount setTitle:[NSString stringWithFormat:@"%@", postPassed.likeCount.stringValue] forState: UIControlStateNormal];
-    PFUser *user = [PFUser currentUser];
+    PFUser *user = postPassed.author;
     self.profileImageIcon.file = user[@"profileImage"];
     [self.profileImageIcon loadInBackground];
-    [self.userName setTitle:[NSString stringWithFormat:@"%@", PFUser.currentUser.username] forState: UIControlStateNormal];
+    [self.userName setTitle:[NSString stringWithFormat:@"%@", postPassed.author.username] forState: UIControlStateNormal];
     
     self.profileImageIcon.layer.cornerRadius = self.profileImageIcon.frame.size.width / 2;
     self.profileImageIcon.clipsToBounds = YES;

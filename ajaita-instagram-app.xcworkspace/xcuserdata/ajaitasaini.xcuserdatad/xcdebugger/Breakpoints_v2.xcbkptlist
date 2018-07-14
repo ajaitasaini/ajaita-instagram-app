@@ -46,7 +46,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ajaita-instagram-app/View Controllers/ComposeViewController.m"
-            timestampString = "553221089.547366"
+            timestampString = "553223897.529071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -62,13 +62,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ajaita-instagram-app/View Controllers/ProfileViewController.m"
-            timestampString = "553221673.016688"
+            timestampString = "553223897.529448"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "ProfileViewController"
-            landmarkType = "3">
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,12 +78,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ajaita-instagram-app/View Controllers/ProfileViewController.m"
-            timestampString = "553221673.017004"
+            timestampString = "553223897.529737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "-onTapSetProfilePic:"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

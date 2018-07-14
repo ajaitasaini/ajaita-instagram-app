@@ -9,6 +9,7 @@ target 'ajaita-instagram-app' do
   pod 'Parse'
   pod 'ParseUI'
   pod 'MBProgressHUD'
+  pod 'DateTools'
   target 'ajaita-instagram-appTests' do
     inherit! :search_paths
     # Pods for testing

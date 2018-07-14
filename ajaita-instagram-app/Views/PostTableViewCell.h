@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *likeCount;
 @property (weak, nonatomic) IBOutlet PFImageView *profileImageIcon;
 @property (weak, nonatomic) IBOutlet UIButton *userName;
+@property (weak, nonatomic) IBOutlet UILabel *createdAtString;
 
 -(void) setupCell:(Post *)postPassed;
 

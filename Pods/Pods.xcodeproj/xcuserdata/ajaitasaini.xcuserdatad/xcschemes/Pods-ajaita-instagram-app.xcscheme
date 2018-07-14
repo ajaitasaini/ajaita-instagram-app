@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E6305CB135787808D17CF2238333A72"
+               BlueprintIdentifier = "6B84E03633444A765B6F622CF58AF813"
                BlueprintName = "Pods-ajaita-instagram-app"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-ajaita-instagram-app.a">

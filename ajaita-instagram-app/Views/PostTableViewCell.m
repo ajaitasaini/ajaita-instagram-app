@@ -10,6 +10,7 @@
 #import "Post.h"
 #import <ParseUI/ParseUI.h>
 #import "ProfileViewController.h"
+#import "DateTools.h"
 
 @implementation PostTableViewCell
 
@@ -19,7 +20,6 @@
     [self.postImage loadInBackground];
     self.currentPost = postPassed;
     self.postComment.text = postPassed.caption;
-    //self.userName.text = PFUser.currentUser.username;
     [self.likeCount setTitle:[NSString stringWithFormat:@"%@", postPassed.likeCount.stringValue] forState: UIControlStateNormal];
     PFUser *user = [PFUser currentUser];
     self.profileImageIcon.file = user[@"profileImage"];
@@ -28,6 +28,11 @@
     
     self.profileImageIcon.layer.cornerRadius = self.profileImageIcon.frame.size.width / 2;
     self.profileImageIcon.clipsToBounds = YES;
+    
+    
+    NSDate *date = postPassed.createdAt;
+    NSString *timeAgoSinceDate = [NSDate shortTimeAgoSinceDate:date];
+    self.createdAtString.text = timeAgoSinceDate;
 }
 
 - (IBAction)onTapFavorite:(id)sender {

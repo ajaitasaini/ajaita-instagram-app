@@ -15,6 +15,7 @@
 #import "AppDelegate.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *postsTableView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (assign, nonatomic) BOOL isMoreDataLoading;
@@ -22,6 +23,8 @@
 @end
 
 @implementation HomeViewController
+
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,11 +39,12 @@
     [self.postsTableView insertSubview:self.refreshControl atIndex:0];
 }
 
+#pragma mark - Action
+
 - (IBAction)onTapLogout:(id)sender {
     AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
     [app logout];
-    
 }
 
 - (IBAction)onTapUserProfileImage:(id)sender {
@@ -51,14 +55,13 @@
     [self performSegueWithIdentifier:@"profileSegue" sender: nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)onTapCompose:(id)sender {
     [self performSegueWithIdentifier:@"composeSegue" sender: nil];
 }
+
+
+#pragma mark - Tableview
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.posts.count;
 }
@@ -71,6 +74,8 @@
     
     return cell;
 }
+
+#pragma mark - Querying Data
 
 - (void) constructQuery {
     // construct PFQuery
@@ -123,6 +128,9 @@
     }];
 }
 
+
+#pragma mark - Updating
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if(!self.isMoreDataLoading){
         int scrollViewContentHeight = self.postsTableView.contentSize.height;
@@ -135,7 +143,8 @@
     }
 }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma mark - Navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"detailSegue"]){
         PostTableViewCell *tappedCell = sender;

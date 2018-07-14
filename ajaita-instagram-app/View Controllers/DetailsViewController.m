@@ -15,21 +15,20 @@
 
 @implementation DetailsViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadImage];
 }
 
+#pragma mark - Image
 - (void)loadImage {
     self.detailImage.file = self.post.image;
     [self.detailImage loadInBackground];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+#pragma mark - Action
 - (IBAction)onTapBackButton:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];
 }

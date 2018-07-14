@@ -14,14 +14,14 @@
 
 
 @interface ComposeViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
 @implementation ComposeViewController
-- (IBAction)postButtonTapped:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
-}
+
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,10 +42,8 @@
     [self presentViewController:imagePickerVC animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+#pragma mark - Action
 
 - (IBAction)onTapPost:(id)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:true];
@@ -56,6 +54,8 @@
     }];
 }
 
+#pragma mark - Image
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     
     // Get the image captured by the UIImagePickerController
@@ -64,26 +64,15 @@
     
     self.previewImage.image = editedImage;
     
+    //saves user profile picture
     PFObject *post = [[PFObject alloc] initWithClassName:@"Post"];
     post[@"postID"] = @"PostID";
     post[@"userID"] = @"userID";
     PFFile *imageFile = [PFFile fileWithName:@"photo.png" data:UIImagePNGRepresentation(editedImage)]; //editedImage is UIImage *
     post[@"image"] = imageFile;
     
-    // Do something with the images (based on your use case)
-    
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

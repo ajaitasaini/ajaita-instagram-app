@@ -22,7 +22,6 @@
 		1918671620F5B1CD00FBBA6B /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918671520F5B1CD00FBBA6B /* DetailsViewController.m */; };
 		1918672120F8160C00FBBA6B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918672020F8160C00FBBA6B /* ProfileViewController.m */; };
 		1918672420F81F7E00FBBA6B /* PostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1918672320F81F7E00FBBA6B /* PostCollectionViewCell.m */; };
-		1958237E20F8A7D900D7E0D7 /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1958237D20F8A7D900D7E0D7 /* UpdateProfileViewController.m */; };
 		7ECFCF0DFD13B45980EA58AA /* libPods-ajaita-instagram-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E74A8B737CA2444FB8CCB4F /* libPods-ajaita-instagram-app.a */; };
 		89DDDD6949110C273E338A6C /* libPods-ajaita-instagram-appUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB7185360E18E8CB131DBB4 /* libPods-ajaita-instagram-appUITests.a */; };
 		C3B944DFE5EFFEFE9F060EC7 /* libPods-ajaita-instagram-appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB645A43DBF075071791BDA /* libPods-ajaita-instagram-appTests.a */; };
@@ -76,8 +75,6 @@
 		1918672020F8160C00FBBA6B /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		1918672220F81F7E00FBBA6B /* PostCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCollectionViewCell.h; sourceTree = "<group>"; };
 		1918672320F81F7E00FBBA6B /* PostCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCollectionViewCell.m; sourceTree = "<group>"; };
-		1958237C20F8A7D900D7E0D7 /* UpdateProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpdateProfileViewController.h; sourceTree = "<group>"; };
-		1958237D20F8A7D900D7E0D7 /* UpdateProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileViewController.m; sourceTree = "<group>"; };
 		2E74A8B737CA2444FB8CCB4F /* libPods-ajaita-instagram-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ajaita-instagram-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB645A43DBF075071791BDA /* libPods-ajaita-instagram-appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ajaita-instagram-appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		546F9271A1BBD780108983E7 /* Pods-ajaita-instagram-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ajaita-instagram-appTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ajaita-instagram-appTests/Pods-ajaita-instagram-appTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,8 +184,6 @@
 				1918671520F5B1CD00FBBA6B /* DetailsViewController.m */,
 				1918671F20F8160C00FBBA6B /* ProfileViewController.h */,
 				1918672020F8160C00FBBA6B /* ProfileViewController.m */,
-				1958237C20F8A7D900D7E0D7 /* UpdateProfileViewController.h */,
-				1958237D20F8A7D900D7E0D7 /* UpdateProfileViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -461,7 +456,6 @@
 				1918670B20F5352E00FBBA6B /* ComposeViewController.m in Sources */,
 				1918670520F4331C00FBBA6B /* HomeViewController.m in Sources */,
 				1918671620F5B1CD00FBBA6B /* DetailsViewController.m in Sources */,
-				1958237E20F8A7D900D7E0D7 /* UpdateProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

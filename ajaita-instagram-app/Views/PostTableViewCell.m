@@ -13,6 +13,7 @@
 
 @implementation PostTableViewCell
 
+
 -(void) setupCell:(Post *)postPassed {
     self.postImage.file = postPassed.image;
     [self.postImage loadInBackground];

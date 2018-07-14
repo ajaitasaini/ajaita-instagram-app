@@ -36,6 +36,17 @@
     return YES;
 }
 
+-(void) logout{
+    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
+        NSLog(@"Logged out!");
+        //[self dismissViewControllerAnimated:true completion:nil];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        
+    }];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

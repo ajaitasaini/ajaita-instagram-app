@@ -27,7 +27,20 @@
     self.postsCollectionView.delegate = self;
     self.postsCollectionView.dataSource = self;
     PFUser *user = [PFUser currentUser];
+    
     self.profileImage.file = user[@"profileImage"];
+    self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
+    self.profileImage.clipsToBounds = YES;
+    
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout*)self.postsCollectionView.collectionViewLayout;
+    layout.minimumInteritemSpacing = 1;
+    layout.minimumLineSpacing = 1;
+    CGFloat postersPerLine = 3;
+    CGFloat itemWidth = (self.postsCollectionView.frame.size.width - layout.minimumInteritemSpacing * (postersPerLine -1)) / postersPerLine;
+    CGFloat itemHeight = itemWidth;
+    layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+    
+    
     [self constructQuery];
 }
 
@@ -86,9 +99,6 @@
     [user saveInBackground];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-//self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2;
-//self.profileImageView.clipsToBounds = YES;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -9,6 +9,7 @@
 #import "PostTableViewCell.h"
 #import "Post.h"
 #import <ParseUI/ParseUI.h>
+#import "ProfileViewController.h"
 
 @implementation PostTableViewCell
 
@@ -17,16 +18,15 @@
     [self.postImage loadInBackground];
     self.currentPost = postPassed;
     self.postComment.text = postPassed.caption;
-    self.userName.text = PFUser.currentUser.username;
+    //self.userName.text = PFUser.currentUser.username;
     [self.likeCount setTitle:[NSString stringWithFormat:@"%@", postPassed.likeCount.stringValue] forState: UIControlStateNormal];
     PFUser *user = [PFUser currentUser];
     self.profileImageIcon.file = user[@"profileImage"];
     [self.profileImageIcon loadInBackground];
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+    [self.userName setTitle:[NSString stringWithFormat:@"%@", PFUser.currentUser.username] forState: UIControlStateNormal];
+    
+    self.profileImageIcon.layer.cornerRadius = self.profileImageIcon.frame.size.width / 2;
+    self.profileImageIcon.clipsToBounds = YES;
 }
 
 - (IBAction)onTapFavorite:(id)sender {

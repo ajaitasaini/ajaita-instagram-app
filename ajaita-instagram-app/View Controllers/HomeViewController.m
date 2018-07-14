@@ -12,6 +12,7 @@
 #import "PostTableViewCell.h"
 #import "DetailsViewController.h"
 #import "MBProgressHUD.h"
+#import "AppDelegate.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *postsTableView;
@@ -36,14 +37,18 @@
 }
 
 - (IBAction)onTapLogout:(id)sender {
-    [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        NSLog(@"Logged out!");
-        [self dismissViewControllerAnimated:true completion:nil];
-    }];
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    [app logout];
+    
 }
 
-- (void)loadDataFromNetwork {
-    
+- (IBAction)onTapUserProfileImage:(id)sender {
+    [self performSegueWithIdentifier:@"profilePicSegue" sender: nil];
+}
+
+- (IBAction)onTapUserName:(id)sender {
+    [self performSegueWithIdentifier:@"profileSegue" sender: nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,6 +67,8 @@
     PostTableViewCell *cell = [self.postsTableView dequeueReusableCellWithIdentifier:@"postCell" forIndexPath:indexPath];
     [cell setupCell:self.posts[indexPath.row]];
     
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"instagram_name"]];
+    
     return cell;
 }
 
@@ -77,11 +84,9 @@
         if (posts) {
             // do something with the data fetched
             self.posts = [[NSMutableArray alloc] initWithArray:posts];
-            //[MBProgressHUD showHUDAddedTo:self.postsTableView animated:true];
             [self.postsTableView reloadData];
             // reload
             NSLog(@"refreshed");
-            //[MBProgressHUD hideHUDForView:self.postsTableView animated:true];
             [self.refreshControl endRefreshing];
         }
         else {
